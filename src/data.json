@@ -1,0 +1,64 @@
+[
+    {
+        "errorMessages": [],
+        "statusCode": 200,
+        "isSuccess": true,
+        "result": [
+            {
+                "subject_ID": 1,
+                "subjectName": "Math"
+            },
+            {
+                "subject_ID": 2,
+                "subjectName": "Science"
+            }
+        ]
+    },
+    {
+        "errorMessages": [],
+        "statusCode": 200,
+        "isSuccess": true,
+        "result": [
+            {
+                "student_ID": 1,
+                "firstname": "Jane",
+                "lastname": "Doe",
+                "phone": "555",
+                "email": "user@example.com"
+            },
+            {
+                "student_ID": 2,
+                "firstname": "John",
+                "lastname": "Doe",
+                "phone": "777",
+                "email": "user@example.com"
+            },
+            {
+                "student_ID": 3,
+                "firstname": "Billy",
+                "lastname": "Bob",
+                "phone": "+1            (529) 785-8144",
+                "email": "user@example.com"
+            }
+        ]
+    },
+    {
+        "errorMessages": [],
+        "statusCode": 200,
+        "isSuccess": true,
+        "result": [
+            {
+                "grade_ID": 3,
+                "student_ID": 1,
+                "subject_ID": 1,
+                "score": 95
+            },
+            {
+                "grade_ID": 4,
+                "student_ID": 1,
+                "subject_ID": 2,
+                "score": 70
+            }
+        ]
+    }
+]

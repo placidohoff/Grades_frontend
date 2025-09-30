@@ -1,23 +1,75 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import StudentDisplay from './StudentDisplay';
+
+
 
 function App() {
+  const [students, setStudents] = useState([]);
+  const [grades, setGrades] = useState([]);
+  const [studentOnDisplay, setStudentOnDisplay] = useState();
+
+  useEffect(() => {
+    getStudents();
+  }, []);
+
+  const getStudents = () => {
+    axios
+      .get("https://localhost:44309/api/Student")
+      .then((response) => {
+        console.log(response);
+        setStudents(response.data.result);
+      })
+      .catch((error) => {
+        console.log("Error with fetch")
+      });
+  }
+
+  const getGrades = () => {
+    axios
+      .get("https://localhost:44309/api/Grade")
+      .then((response) => {
+        console.log(response);
+        setGrades(response.data.result);
+      })
+      .catch((error) => {
+        console.log("Error with fetch")
+      });
+  }
+
+  const Student = ({ student }) => {
+    return (
+      <div 
+      onClick={() => setStudentOnDisplay(student)}
+      style={{border: "1px solid", borderRadius: "5px", marginBottom: "5px", maxWidth: "300px"}}
+      >
+        <p>{student.firstname + ' ' + student.lastname }</p> 
+        {/* <p className='bold underline'>Grades</p> */}
+      </div>
+    )
+  }
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className="App container">
+      <h1>Welcome to the School Admin Page</h1>
+      <div className='row'>
+        <div className='col'>Students
+          {
+            students.map((student, index) => (
+              <Student key={index} student={student} />
+            ))
+          }
+        </div>
+        <div className='col'>
+          <StudentDisplay student={studentOnDisplay} />
+        </div>
+        {/* <div className='col'>1</div> */}
+      </div>
     </div>
   );
 }
