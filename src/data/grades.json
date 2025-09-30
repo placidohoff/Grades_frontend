@@ -1,0 +1,14 @@
+[
+    {
+        "grade_ID": 3,
+        "student_ID": 1,
+        "subject_ID": 1,
+        "score": 95
+    },
+    {
+        "grade_ID": 4,
+        "student_ID": 1,
+        "subject_ID": 2,
+        "score": 70
+    }
+]

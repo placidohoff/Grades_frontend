@@ -1,0 +1,23 @@
+[
+    {
+        "student_ID": 1,
+        "firstname": "Jane",
+        "lastname": "Doe",
+        "phone": "555",
+        "email": "user@example.com"
+    },
+    {
+        "student_ID": 2,
+        "firstname": "John",
+        "lastname": "Doe",
+        "phone": "777",
+        "email": "user@example.com"
+    },
+    {
+        "student_ID": 3,
+        "firstname": "Billy",
+        "lastname": "Bob",
+        "phone": "+1            (529) 785-8144",
+        "email": "user@example.com"
+    }
+]

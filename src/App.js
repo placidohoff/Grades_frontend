@@ -3,6 +3,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import StudentDisplay from './StudentDisplay';
+import localStudents from './data/students.json';
 
 
 
@@ -12,7 +13,8 @@ function App() {
   const [studentOnDisplay, setStudentOnDisplay] = useState();
 
   useEffect(() => {
-    getStudents();
+    // getStudents();
+    getStudentsLocal();
   }, []);
 
   const getStudents = () => {
@@ -37,6 +39,14 @@ function App() {
       .catch((error) => {
         console.log("Error with fetch")
       });
+  }
+
+  const getStudentsLocal = () => {
+    // axios.get('./data/students.json')
+    // .then((result) => console.log(result))
+    // .catch((error) => console.error(error))
+
+    setStudents(localStudents);
   }
 
   const Student = ({ student }) => {
