@@ -1,14 +1,50 @@
 [
     {
-        "grade_ID": 3,
-        "student_ID": 1,
-        "subject_ID": 1,
-        "score": 95
+      "grade_ID": 3,
+      "student_ID": 1,
+      "subject_ID": 1,
+      "score": 95
     },
     {
-        "grade_ID": 4,
-        "student_ID": 1,
-        "subject_ID": 2,
-        "score": 70
+      "grade_ID": 4,
+      "student_ID": 1,
+      "subject_ID": 2,
+      "score": 70
+    },
+    {
+      "grade_ID": 5,
+      "student_ID": 3,
+      "subject_ID": 1,
+      "score": 70
+    },
+    {
+      "grade_ID": 6,
+      "student_ID": 2,
+      "subject_ID": 2,
+      "score": 85
+    },
+    {
+      "grade_ID": 7,
+      "student_ID": 2,
+      "subject_ID": 1,
+      "score": 60
+    },
+    {
+      "grade_ID": 8,
+      "student_ID": 3,
+      "subject_ID": 2,
+      "score": 75
+    },
+    {
+      "grade_ID": 9,
+      "student_ID": 3,
+      "subject_ID": 1,
+      "score": 90
+    },
+    {
+      "grade_ID": 10,
+      "student_ID": 3,
+      "subject_ID": 2,
+      "score": 80
     }
 ]

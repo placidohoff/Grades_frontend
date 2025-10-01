@@ -13,8 +13,8 @@ function App() {
   const [studentOnDisplay, setStudentOnDisplay] = useState();
 
   useEffect(() => {
-    // getStudents();
-    getStudentsLocal();
+    getStudents();
+    // getStudentsLocal();
   }, []);
 
   const getStudents = () => {
